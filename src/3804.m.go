@@ -1,4 +1,4 @@
-pakcage main
+package main
 
 func centeredSubarrays(nums []int) int {
 	var visited map[int]bool = make(map[int]bool, 0)
