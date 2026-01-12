@@ -3,5 +3,5 @@ package main
 import "fmt"
 
 func main() {
-	fmt.Println(beautifulArray(3))
+	fmt.Println(minTimeToVisitAllPoints([][]int{{3,2},{-2,2}}))
 }
