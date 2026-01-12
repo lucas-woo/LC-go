@@ -8,12 +8,14 @@ package main
  *     Right *TreeNode
  * }
  */
+
 func buildTree(preorder []int, inorder []int) *TreeNode {
   pointer := 0
-	return mergeTreeTwo(preorder, inorder, &pointer)
+	return mergeTreeTwo(preorder, inorder, &pointer, 0, len(preorder) - 1)
 }
-func mergeTreeTwo(preorder []int, inorder []int, pointer *int) *TreeNode {
-	if len(inorder) == 0 {
+
+func mergeTreeTwo(preorder []int, inorder []int, pointer *int, left, right int) *TreeNode {
+	if left > right {
 		return nil
 	}
 	p := *pointer
@@ -25,8 +27,8 @@ func mergeTreeTwo(preorder []int, inorder []int, pointer *int) *TreeNode {
 		Right: nil,
 	}
 	i := findIndexTree(inorder, curVal)
-	cur.Left = mergeTreeTwo(preorder, inorder[:i], pointer)
-	cur.Right = mergeTreeTwo(preorder, inorder[i+1:], pointer)
+	cur.Left = mergeTreeTwo(preorder, inorder, pointer, left, i - 1)
+	cur.Right = mergeTreeTwo(preorder, inorder, pointer, i + 1, right)
 	return cur
 }
 
