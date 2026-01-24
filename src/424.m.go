@@ -18,11 +18,25 @@ func characterReplacement(s string, k int) int {
 		}
 		contentMap[curLetter]++;
 
-		if (i - startMap[v]) - contentMap[v] >
+		if (i - startMap[curLetter] + 1) - contentMap[curLetter] > k {
 
+			for j := startMap[curLetter] + 1; j < len(s); j++ {
 
+				if s[j] == s[i] {
+					startMap[s[i]] = j;
+					contentMap[curLetter]--;
+					break;
+				}
+
+			}
+
+		} else {
+			temp := min((i+1) + (k - (i+1 - contentMap[curLetter])), len(s))
+			biggest = max(biggest, temp)
+		}
 
 
 	}
+
 	return biggest
 }
