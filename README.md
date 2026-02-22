@@ -1,12 +1,7 @@
-Posting my leetcode solutions in go here
+## Leetcode Profile:
+#https://leetcode.com/u/elyktra/
 
-
-Naming Convention:
-
-
-e - easy
-m - medium
-h - hard
-
-
-Example: 41.m.go (leetcode number 41, medium)
+# File Naming Convention:
+#`.e` - easy
+#`.m` - medium
+#`.h` - hard
