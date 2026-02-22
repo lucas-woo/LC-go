@@ -1,5 +1,5 @@
 ## Leetcode Profile:
-#https://leetcode.com/u/elyktra/
+# https://leetcode.com/u/elyktra/
 
 # File Naming Convention:
 #`.e` - easy
