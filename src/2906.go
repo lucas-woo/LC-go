@@ -23,7 +23,6 @@ func constructProductMatrix(grid [][]int) [][]int {
 		right[i] = prod;
 		prod = (prod * flat[i]) % 12345
 	}
-	fmt.Println(left, right)
 	for i := 0; i < len(grid); i++ {
 		for j := 0; j < len(grid[i]); j++ {
 			grid[i][j] = (left[(i * m) + (j)] * right[(i * m) + (j)]) % 12345
