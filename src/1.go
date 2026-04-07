@@ -1,6 +1,6 @@
 package main
-//redeclared
-func twoSummmmmmmm(nums []int, target int) []int {
+
+func twoSum(nums []int, target int) []int {
     var hashmap map[int]int = make(map[int]int);
 		var mySlice [] int = []int{};
     var i int = 0;
