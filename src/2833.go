@@ -1,4 +1,4 @@
-package main
+package mai
 
 
 func furthestDistanceFromOrigin(moves string) int {
