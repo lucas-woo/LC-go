@@ -1,3 +1,6 @@
+package main
+
+
 func minimumPairRemoval(nums []int) int {
 	if len(nums) <= 1 {
 		return 0
